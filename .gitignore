@@ -1,0 +1,35 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Dependencias y herramientas
+node_modules/
+.npm/
+.cache/
+
+# Builds y reportes
+dist/
+build/
+.lighthouseci/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Python (servidor local de pruebas)
+__pycache__/
