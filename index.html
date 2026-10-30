@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real Estate Chapultepec | Casas y departamentos en Polanco y Lomas de Chapultepec</title>
+  <meta name="description" content="Compra, venta y renta de casas y departamentos en Polanco, Lomas de Chapultepec, Bosques de las Lomas y San Miguel Chapultepec. Visitas privadas y revisión legal de cada inmueble.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <!-- TODO: sustituir https://www.example.com por el dominio definitivo -->
+  <link rel="canonical" href="https://www.example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Real Estate Chapultepec">
+  <meta property="og:title" content="Real Estate Chapultepec | Propiedades alrededor del Bosque de Chapultepec">
+  <meta property="og:description" content="Casas, departamentos y penthouses en Polanco, Lomas de Chapultepec, Bosques de las Lomas y San Miguel Chapultepec.">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Aplica el tema elegido en esta sesión antes del primer pintado para evitar parpadeo -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var theme = sessionStorage.getItem('rec-theme');
+        if (theme === 'light' || theme === 'dark') root.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+
+  <!-- DEMO: datos de la empresa ficticios -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Real Estate Chapultepec",
+    "url": "https://www.example.com/",
+    "image": "https://www.example.com/assets/images/og-image.jpg",
+    "telephone": "+52 55 0000 0000",
+    "email": "contacto@example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Paseo de la Reforma 000",
+      "addressLocality": "Miguel Hidalgo",
+      "addressRegion": "CDMX",
+      "postalCode": "11000",
+      "addressCountry": "MX"
+    },
+    "areaServed": ["Polanco", "Lomas de Chapultepec", "Bosques de las Lomas", "San Miguel Chapultepec"],
+    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-14:00"]
+  }
+  </script>
+  <!--
+    Plantilla para datos estructurados por propiedad (una por <article class="property">):
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "", "url": "", "image": "",
+      "offers": { "@type": "Offer", "price": 0, "priceCurrency": "MXN", "businessFunction": "http://purl.org/goodrelations/v1#Sell" },
+      "about": { "@type": "House", "floorSize": { "@type": "QuantitativeValue", "value": 0, "unitCode": "MTK" }, "numberOfRooms": 0, "numberOfBathroomsTotal": 0,
+                 "address": { "@type": "PostalAddress", "addressLocality": "", "addressRegion": "CDMX", "addressCountry": "MX" } }
+    }
+  -->
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="header-sentinel" data-header-sentinel aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 25V7h17" /><path d="M14 25V13h11" /></svg>
+        <span class="brand__text">
+          <span class="brand__top">Real Estate</span>
+          <span class="brand__name">Chapultepec</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Principal" data-nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="nav-toggle__label">Menú</span>
+        </button>
+        <ul class="site-nav__list" id="nav-menu" role="list" data-nav-menu>
+          <li><a href="#nosotros">Despacho</a></li>
+          <li><a href="#propiedades">Propiedades</a></li>
+          <li><a href="#zonas">Zonas</a></li>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li class="site-nav__cta"><a class="btn btn--primary btn--sm" href="#contacto">Agendar visita</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+        <span class="visually-hidden">Tema oscuro</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <h1 id="hero-title">Propiedades residenciales alrededor del Bosque de Chapultepec</h1>
+          <p class="hero__lead">Compra, venta y renta en Polanco, Lomas de Chapultepec, Bosques de las Lomas y San Miguel Chapultepec. Cada inmueble se visita, se valúa y se revisa legalmente antes de publicarse.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#propiedades">Ver propiedades disponibles</a>
+            <a class="link-arrow" href="#contacto">Agendar una asesoría</a>
+          </div>
+        </div>
+        <figure class="hero__media">
+          <img
+            src="assets/images/hero-1024.webp"
+            srcset="assets/images/hero-640.webp 640w, assets/images/hero-1024.webp 1024w, assets/images/hero-1600.webp 1600w"
+            sizes="(min-width: 64em) 58vw, 100vw"
+            width="1600" height="1600"
+            alt="Casa contemporánea de fachada clara con terrazas de cristal y alberca en primer plano"
+            fetchpriority="high" decoding="async">
+          <figcaption>Residencia contemporánea. Imagen de referencia.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DESPACHO -->
+    <section class="section intro" id="nosotros" aria-labelledby="intro-title">
+      <div class="container intro__grid">
+        <h2 class="intro__title" id="intro-title">Un despacho pequeño, por decisión</h2>
+        <p class="intro__statement">Trabajamos un número limitado de propiedades a la vez para conocer cada una a fondo: su escritura, su predial, su orientación y lo que cuesta mantenerla. Así podemos decirle con certeza qué está comprando.</p>
+        <!-- DEMO: datos ilustrativos -->
+        <dl class="facts" data-demo>
+          <div><dt>En la zona desde</dt><dd>2009</dd></div>
+          <div><dt>Propiedades activas</dt><dd>Máximo 20</dd></div>
+          <div><dt>Revisión legal</dt><dd>Notaría asociada</dd></div>
+          <div><dt>Atención</dt><dd>Español e inglés</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES -->
+    <section class="section properties" id="propiedades" aria-labelledby="properties-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="properties-title">Propiedades seleccionadas</h2>
+          <p>Cinco inmuebles disponibles. Todos con documentación revisada y visita privada con cita previa.</p>
+        </div>
+
+        <!--
+          DEMO: propiedades ficticias. Para reemplazar, edite cada <article class="property">:
+          id, data-*, imagen (srcset), textos y el value correspondiente en el <select id="f-property"> del formulario.
+        -->
+        <ul class="property-grid" role="list">
+          <li class="property-grid__item property-grid__item--feature">
+            <article class="property" id="casa-bosque-de-ciruelos" data-demo data-property-id="RC-0141" data-operation="venta" data-type="casa" data-price="47000000" data-currency="MXN" data-area="540" data-bedrooms="4" data-bathrooms="4.5" data-locality="Bosques de las Lomas">
+              <figure class="property__media">
+                <img
+                  src="assets/images/prop-bosque-ciruelos-1024.webp"
+                  srcset="assets/images/prop-bosque-ciruelos-640.webp 640w, assets/images/prop-bosque-ciruelos-1024.webp 1024w, assets/images/prop-bosque-ciruelos-1600.webp 1600w"
+                  sizes="(min-width: 64em) 62vw, 92vw"
+                  width="1600" height="1067"
+                  alt="Fachada de casa contemporánea de dos niveles al anochecer, con muros de madera oscura, ventanales iluminados y un árbol de gran tamaño sobre el jardín"
+                  loading="lazy" decoding="async">
+              </figure>
+              <div class="property__body">
+                <h3 class="property__title">Casa Bosque de Ciruelos</h3>
+                <p class="property__location">Bosques de las Lomas, CDMX</p>
+                <p class="property__desc">Casa terminada en 2017 bajo un árbol centenario. Terraza techada, cocina abierta al jardín y estudio independiente con acceso propio.</p>
+                <p class="property__price"><span class="property__op">Venta</span> <data value="47000000">$47,000,000</data> <abbr title="pesos mexicanos">MXN</abbr></p>
+                <dl class="property__specs">
+                  <div><dt>Tipo</dt><dd>Casa</dd></div>
+                  <div><dt>Superficie</dt><dd>540 m²</dd></div>
+                  <div><dt>Recámaras</dt><dd>4</dd></div>
+                  <div><dt>Baños</dt><dd>4.5</dd></div>
+                </dl>
+                <a class="link-arrow property__cta" href="#contacto" data-inquire="casa-bosque-de-ciruelos">Solicitar ficha completa<span class="visually-hidden"> de Casa Bosque de Ciruelos</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="property-grid__item">
+            <article class="property" id="penthouse-campos-eliseos" data-demo data-property-id="RC-0137" data-operation="venta" data-type="penthouse" data-price="38500000" data-currency="MXN" data-area="412" data-bedrooms="3" data-bathrooms="3.5" data-locality="Polanco V Sección">
+              <figure class="property__media">
+                <img
+                  src="assets/images/prop-campos-eliseos-1024.webp"
+                  srcset="assets/images/prop-campos-eliseos-640.webp 640w, assets/images/prop-campos-eliseos-1024.webp 1024w, assets/images/prop-campos-eliseos-1600.webp 1600w"
+                  sizes="(min-width: 64em) 52vw, (min-width: 48em) 45vw, 92vw"
+                  width="1600" height="1067"
+                  alt="Estancia de penthouse con sala gris, muro revestido de madera, chimenea de piedra y ventanales abiertos a la terraza"
+                  loading="lazy" decoding="async">
+              </figure>
+              <div class="property__body">
+                <h3 class="property__title">Penthouse Campos Elíseos</h3>
+                <p class="property__location">Polanco V Sección, CDMX</p>
+                <p class="property__price"><span class="property__op">Venta</span> <data value="38500000">$38,500,000</data> <abbr title="pesos mexicanos">MXN</abbr></p>
+                <dl class="property__specs">
+                  <div><dt>Tipo</dt><dd>Penthouse</dd></div>
+                  <div><dt>Superficie</dt><dd>412 m²</dd></div>
+                  <div><dt>Recámaras</dt><dd>3</dd></div>
+                  <div><dt>Baños</dt><dd>3.5</dd></div>
+                </dl>
+                <a class="link-arrow property__cta" href="#contacto" data-inquire="penthouse-campos-eliseos">Solicitar ficha completa<span class="visually-hidden"> de Penthouse Campos Elíseos</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="property-grid__item">
+            <article class="property" id="casa-sierra-gorda" data-demo data-property-id="RC-0129" data-operation="venta" data-type="casa" data-price="64000000" data-currency="MXN" data-area="620" data-bedrooms="5" data-bathrooms="6" data-locality="Lomas de Chapultepec">
+              <figure class="property__media">
+                <img
+                  src="assets/images/prop-sierra-gorda-1024.webp"
+                  srcset="assets/images/prop-sierra-gorda-640.webp 640w, assets/images/prop-sierra-gorda-1024.webp 1024w, assets/images/prop-sierra-gorda-1600.webp 1600w"
+                  sizes="(min-width: 64em) 36vw, (min-width: 48em) 45vw, 92vw"
+                  width="1600" height="1067"
+                  alt="Casa blanca de líneas rectas con plafones de madera, ventanales en dos niveles y alberca al frente"
+                  loading="lazy" decoding="async">
+              </figure>
+              <div class="property__body">
+                <h3 class="property__title">Casa Sierra Gorda</h3>
+                <p class="property__location">Lomas de Chapultepec, CDMX</p>
+                <p class="property__price"><span class="property__op">Venta</span> <data value="64000000">$64,000,000</data> <abbr title="pesos mexicanos">MXN</abbr></p>
+                <dl class="property__specs">
+                  <div><dt>Tipo</dt><dd>Casa</dd></div>
+                  <div><dt>Superficie</dt><dd>620 m²</dd></div>
+                  <div><dt>Recámaras</dt><dd>5</dd></div>
+                  <div><dt>Baños</dt><dd>6</dd></div>
+                </dl>
+                <a class="link-arrow property__cta" href="#contacto" data-inquire="casa-sierra-gorda">Solicitar ficha completa<span class="visually-hidden"> de Casa Sierra Gorda</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="property-grid__item">
+            <article class="property" id="casa-edgar-allan-poe" data-demo data-property-id="RC-0133" data-operation="venta" data-type="casa" data-price="41800000" data-currency="MXN" data-area="480" data-bedrooms="4" data-bathrooms="4.5" data-locality="Polanco III Sección">
+              <figure class="property__media">
+                <img
+                  src="assets/images/prop-allan-poe-1024.webp"
+                  srcset="assets/images/prop-allan-poe-640.webp 640w, assets/images/prop-allan-poe-1024.webp 1024w, assets/images/prop-allan-poe-1600.webp 1600w"
+                  sizes="(min-width: 64em) 36vw, (min-width: 48em) 45vw, 92vw"
+                  width="1600" height="1067"
+                  alt="Fachada de casa con revestimiento de madera clara, gran ventanal en planta baja y acceso con jardín de grava"
+                  loading="lazy" decoding="async">
+              </figure>
+              <div class="property__body">
+                <h3 class="property__title">Casa Edgar Allan Poe</h3>
+                <p class="property__location">Polanco III Sección, CDMX</p>
+                <p class="property__price"><span class="property__op">Venta</span> <data value="41800000">$41,800,000</data> <abbr title="pesos mexicanos">MXN</abbr></p>
+                <dl class="property__specs">
+                  <div><dt>Tipo</dt><dd>Casa</dd></div>
+                  <div><dt>Superficie</dt><dd>480 m²</dd></div>
+                  <div><dt>Recámaras</dt><dd>4</dd></div>
+                  <div><dt>Baños</dt><dd>4.5</dd></div>
+                </dl>
+                <a class="link-arrow property__cta" href="#contacto" data-inquire="casa-edgar-allan-poe">Solicitar ficha completa<span class="visually-hidden"> de Casa Edgar Allan Poe</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="property-grid__item">
+            <article class="property" id="departamento-gobernador" data-demo data-property-id="RC-0145" data-operation="renta" data-type="departamento" data-price="68000" data-currency="MXN" data-area="132" data-bedrooms="2" data-bathrooms="2" data-locality="San Miguel Chapultepec">
+              <figure class="property__media">
+                <img
+                  src="assets/images/prop-gobernador-1024.webp"
+                  srcset="assets/images/prop-gobernador-640.webp 640w, assets/images/prop-gobernador-1024.webp 1024w, assets/images/prop-gobernador-1600.webp 1600w"
+                  sizes="(min-width: 64em) 45vw, (min-width: 48em) 45vw, 92vw"
+                  width="1600" height="1067"
+                  alt="Departamento luminoso con sala gris, librero empotrado, plantas y escritorio junto a la ventana"
+                  loading="lazy" decoding="async">
+              </figure>
+              <div class="property__body">
+                <h3 class="property__title">Departamento Gobernador</h3>
+                <p class="property__location">San Miguel Chapultepec, CDMX</p>
+                <p class="property__price"><span class="property__op">Renta</span> <data value="68000">$68,000</data> <abbr title="pesos mexicanos">MXN</abbr> <span class="property__period">al mes</span></p>
+                <dl class="property__specs">
+                  <div><dt>Tipo</dt><dd>Departamento</dd></div>
+                  <div><dt>Superficie</dt><dd>132 m²</dd></div>
+                  <div><dt>Recámaras</dt><dd>2</dd></div>
+                  <div><dt>Baños</dt><dd>2</dd></div>
+                </dl>
+                <a class="link-arrow property__cta" href="#contacto" data-inquire="departamento-gobernador">Solicitar ficha completa<span class="visually-hidden"> de Departamento Gobernador</span></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BANDA DE IMAGEN -->
+    <figure class="band">
+      <img
+        src="assets/images/bosque-1600.webp"
+        srcset="assets/images/bosque-640.webp 640w, assets/images/bosque-1024.webp 1024w, assets/images/bosque-1600.webp 1600w, assets/images/bosque-2400.webp 2400w"
+        sizes="100vw"
+        width="2400" height="1350"
+        alt="Bosque de árboles altos con luz de tarde que se filtra entre el follaje"
+        loading="lazy" decoding="async">
+      <figcaption class="container">
+        <span class="band__text">Más de 600 hectáreas de bosque a unos minutos de cada propiedad que representamos.</span>
+        <span class="band__credit">Imagen de referencia</span>
+      </figcaption>
+    </figure>
+
+    <!-- ZONAS -->
+    <section class="section zones" id="zonas" aria-labelledby="zones-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="zones-title">Zonas donde operamos</h2>
+          <p>Conocemos estas colonias calle por calle: qué cuadras tienen más tráfico, dónde conviene la orientación sur y cómo se ha movido el precio por metro cuadrado.</p>
+        </div>
+        <!-- DEMO: precios de referencia ilustrativos -->
+        <ul class="zones__list" role="list" data-demo>
+          <li class="zone">
+            <h3 class="zone__name">Polanco</h3>
+            <p class="zone__desc">Departamentos y penthouses cerca de Presidente Masaryk, Campos Elíseos y el Parque Lincoln.</p>
+            <p class="zone__ref"><span class="zone__ref-label">Referencia por m²</span> $110,000 MXN</p>
+          </li>
+          <li class="zone">
+            <h3 class="zone__name">Lomas de Chapultepec</h3>
+            <p class="zone__desc">Casas con jardín sobre calles arboladas, terrenos amplios y privacidad a diez minutos de Reforma.</p>
+            <p class="zone__ref"><span class="zone__ref-label">Referencia por m²</span> $85,000 MXN</p>
+          </li>
+          <li class="zone">
+            <h3 class="zone__name">Bosques de las Lomas</h3>
+            <p class="zone__desc">Casas y departamentos con vista a barrancas arboladas, cerca de colegios bilingües.</p>
+            <p class="zone__ref"><span class="zone__ref-label">Referencia por m²</span> $68,000 MXN</p>
+          </li>
+          <li class="zone">
+            <h3 class="zone__name">San Miguel Chapultepec</h3>
+            <p class="zone__desc">Departamentos en edificios de baja altura, en calles tranquilas a pasos del Bosque.</p>
+            <p class="zone__ref"><span class="zone__ref-label">Referencia por m²</span> $62,000 MXN</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section process" id="proceso" aria-labelledby="process-title">
+      <div class="container process__grid">
+        <div class="process__intro">
+          <h2 id="process-title">Cómo trabajamos</h2>
+          <p>Un mismo asesor le acompaña desde la primera llamada hasta la firma ante notario.</p>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step">
+            <h3 class="step__title">Primera conversación</h3>
+            <p>Definimos presupuesto, colonias, tiempos y lo que no está dispuesto a negociar. Con ese filtro, cada visita vale la pena.</p>
+          </li>
+          <li class="step">
+            <h3 class="step__title">Visitas privadas</h3>
+            <p>Solo le mostramos inmuebles que ya visitamos. Coordinamos horarios con el propietario y le enviamos antes planos y fotografías actuales.</p>
+          </li>
+          <li class="step">
+            <h3 class="step__title">Revisión legal</h3>
+            <p>Antes de cualquier oferta revisamos escrituras, libertad de gravamen, predial, agua y uso de suelo con nuestra notaría asociada.</p>
+          </li>
+          <li class="step">
+            <h3 class="step__title">Negociación y escrituración</h3>
+            <p>Negociamos con comparables reales de la colonia y coordinamos avalúo, crédito y firma hasta la entrega de llaves.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA PROPIETARIOS -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__grid">
+        <h2 id="cta-title">¿Vende o renta una propiedad en la zona?</h2>
+        <div class="cta-band__body">
+          <p>Le entregamos una valuación con comparables reales de su colonia en un máximo de 72 horas, sin costo y sin exigir exclusividad.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--inverse" href="#contacto" data-inquire="valuacion">Solicitar valuación</a>
+            <!-- DEMO: número de WhatsApp ficticio -->
+            <a class="link-arrow" href="https://wa.me/525500000000?text=Hola%2C%20me%20gustar%C3%ADa%20valuar%20mi%20propiedad." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <h2 id="contact-title">Agende una visita o solicite información</h2>
+          <p class="contact__lead">Respondemos el mismo día hábil. Si lo prefiere, llámenos o escríbanos por WhatsApp.</p>
+          <!-- DEMO: datos de contacto ficticios -->
+          <address class="contact__details" data-demo>
+            <dl>
+              <div><dt>Oficina</dt><dd>Av. Paseo de la Reforma 000<br>Lomas de Chapultepec, 11000, CDMX</dd></div>
+              <div><dt>Teléfono</dt><dd><a href="tel:+525500000000">+52 55 0000 0000</a></dd></div>
+              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/525500000000?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20sus%20propiedades." target="_blank" rel="noopener noreferrer">+52 55 0000 0000<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></dd></div>
+              <div><dt>Correo</dt><dd><a href="mailto:contacto@example.com">contacto@example.com</a></dd></div>
+              <div><dt>Horario</dt><dd>Lunes a viernes, 9:00 a 19:00<br>Sábado, 10:00 a 14:00</dd></div>
+            </dl>
+          </address>
+        </div>
+
+        <div class="contact__form">
+          <!-- TODO(API): el envío real se integra en sendInquiry() de js/main.js; actualizar action/method si se usa un endpoint sin JS -->
+          <form class="form" id="contact-form" action="#contacto" method="post" novalidate data-contact-form>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="f-name">Nombre completo</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="120" aria-describedby="f-name-error">
+                <p class="field__error" id="f-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Correo electrónico</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160" aria-describedby="f-email-error">
+                <p class="field__error" id="f-email-error"></p>
+              </div>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="f-phone">Teléfono</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" aria-describedby="f-phone-hint f-phone-error">
+                <p class="field__hint" id="f-phone-hint">10 dígitos, o con lada internacional.</p>
+                <p class="field__error" id="f-phone-error"></p>
+              </div>
+              <div class="field">
+                <label for="f-property">Propiedad de interés</label>
+                <div class="select">
+                  <select id="f-property" name="property" required aria-describedby="f-property-error">
+                    <option value="">Seleccione una opción</option>
+                    <optgroup label="Propiedades">
+                      <option value="casa-bosque-de-ciruelos">Casa Bosque de Ciruelos</option>
+                      <option value="penthouse-campos-eliseos">Penthouse Campos Elíseos</option>
+                      <option value="casa-sierra-gorda">Casa Sierra Gorda</option>
+                      <option value="casa-edgar-allan-poe">Casa Edgar Allan Poe</option>
+                      <option value="departamento-gobernador">Departamento Gobernador (renta)</option>
+                    </optgroup>
+                    <optgroup label="Otras solicitudes">
+                      <option value="busqueda">Busco otra propiedad en la zona</option>
+                      <option value="valuacion">Valuación de mi propiedad</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <p class="field__error" id="f-property-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-message">Mensaje <span class="field__optional">(opcional)</span></label>
+              <textarea id="f-message" name="message" rows="5" maxlength="1000" aria-describedby="f-message-error"></textarea>
+              <p class="field__error" id="f-message-error"></p>
+            </div>
+
+            <div class="field">
+              <div class="checkbox">
+                <input id="f-consent" name="consent" type="checkbox" value="si" required aria-describedby="f-consent-error">
+                <label for="f-consent">Acepto el <a href="#aviso-privacidad">aviso de privacidad</a> y que me contacten sobre esta solicitud.</label>
+              </div>
+              <p class="field__error" id="f-consent-error"></p>
+            </div>
+
+            <div class="form__footer">
+              <button class="btn btn--primary form__submit" type="submit" data-submit>
+                <span class="spinner" aria-hidden="true"></span>
+                <span data-submit-label>Enviar solicitud</span>
+              </button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+
+          <div class="form-success" hidden data-form-success>
+            <h3 tabindex="-1" data-success-title>Solicitud recibida</h3>
+            <p>Gracias. Un asesor le contactará el mismo día hábil para confirmar los detalles de su visita o enviarle la ficha completa.</p>
+            <button class="link-arrow link-arrow--button" type="button" data-form-reset>Enviar otra solicitud</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <a class="brand brand--footer" href="#inicio">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 25V7h17" /><path d="M14 25V13h11" /></svg>
+          <span class="brand__text">
+            <span class="brand__top">Real Estate</span>
+            <span class="brand__name">Chapultepec</span>
+          </span>
+        </a>
+        <nav class="footer__nav" aria-label="Pie de página">
+          <ul role="list">
+            <li><a href="#propiedades">Propiedades</a></li>
+            <li><a href="#zonas">Zonas</a></li>
+            <li><a href="#proceso">Cómo trabajamos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <p class="footer__contact" data-demo>
+          <a href="tel:+525500000000">+52 55 0000 0000</a><br>
+          <a href="mailto:contacto@example.com">contacto@example.com</a>
+        </p>
+      </div>
+
+      <div class="footer__legal">
+        <p id="aviso-privacidad"><strong>Aviso de privacidad.</strong> Los datos que nos comparte se usan únicamente para responder su solicitud y no se transfieren a terceros. <!-- TODO: sustituir por el aviso de privacidad integral conforme a la LFPDPPP --></p>
+        <p>Sitio de demostración: propiedades, precios y datos de contacto son ficticios. Fotografías de Unsplash.</p>
+        <p>© <span data-year>2026</span> Real Estate Chapultepec. Precios y disponibilidad sujetos a cambio sin previo aviso.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DEMO: número de WhatsApp ficticio -->
+  <a class="wa-float" href="https://wa.me/525500000000?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20sus%20propiedades." target="_blank" rel="noopener noreferrer" data-wa-float>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    <span class="wa-float__label">Escribir por WhatsApp</span>
+    <span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+  </a>
+</body>
+</html>
